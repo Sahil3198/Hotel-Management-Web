@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="HotelManagement.Main" %>
+
+<!DOCTYPE html>
+<script>
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+	</script>
+<html>
+<head runat="server">
+    <title>Hotel Management</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <META Http-Equiv="Cache-Control" Content="no-cache"/>
+<META Http-Equiv="Pragma" Content="no-cache"/>
+<META Http-Equiv="Expires" Content="0"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder> 
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 760px;
+        }
+        .auto-style2 {
+            margin-left: 680px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">    
+        <div id="n1" runat="server">
+                 <ul id="m1">
+                <li><a href="homepage.aspx">Online Hotel Booking</a></li>                     
+                     <%if (Session["id"] == null)
+                         { %>
+                <li style="float:right"><asp:Button ID="Button3" runat="server" OnClick="Button1_Click1" Text="Login" Height="50px" Width="70px" BackColor="Lime" Font-Bold="True" ForeColor="Black" /></li>
+                     <%}
+                                                     else
+                                                     { %>
+                
+                <li style="float:right"><asp:Button ID="Button4" runat="server" OnClick="Button1_Click2" Text="Logout" Width="70px" Height="50px" BackColor="Lime" Font-Bold="True" ForeColor="Black" /></li>
+                     <li style="float:right"><asp:Button ID="Button1" runat="server" Text="Show User" Visible="True" Height="50px" Width="80px" OnClick="Button1_Click" BackColor="Lime" Font-Bold="True" ForeColor="Black" /></li> 
+                     <%} %> 
+                 </ul>
+        </div>
+ 
+        <div class="logo">
+			<h1 style="text-align:center;"><a  href="homepage.aspx">Hotel<span>Continental</span></a></h1>
+		</div>
+
+<div id="n2" runat="server">
+    <div class="topnav">
+        <ul id="nav">
+
+            <li><a href="homepage.aspx" onclick="load()">HOME</a></li>
+            <li><a href="about.aspx" onclick="load()">ABOUT US</a></li>
+             <li><a href="hotels.aspx" onclick="load()">HOTELS</a></li>
+             <li><a href="feedback.aspx" onclick="load()">FEEDBACK</a></li>
+             <% if (Session["id"] == null) { %>
+        <li><a href="login.aspx">BOOKING</a></li>
+    <% } else {
+            %>
+        <li><a href="booking.aspx">BOOKING</a></li>
+         
+    <%} %>
+         </ul>
+     </div>
+            </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        
+    
+    </form>
+</body>
+</html>

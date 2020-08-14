@@ -1,0 +1,133 @@
+﻿/*HomePage BackGround*/
+body {
+    background-color: lightblue;
+    background-image: url("../images/y1.jpeg");
+    background-size: cover;
+}
+/*Feedback BackGround*/
+#feedback {
+    background-image: url("../images/y3.jpg");
+    background-size: cover;
+}
+/*About BackGround*/
+#about {
+    background-image: url("../images/index.jpg");
+    background-size: cover;
+}
+/*Hotel BackGround*/
+#hotel {
+    background-image: url("../images/hotelback.jpg");
+    background-size: cover;
+}
+/*Basic Css for all tag*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+.b1{
+    text-align:right;
+}
+#b2 {
+    font-weight: bold;
+}
+
+/*Main Hading*/
+#m1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+    #m1 li {
+        float: left;
+    }
+
+        #m1 li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            #m1 li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+.active {
+    background-color: #4CAF50;
+}
+
+/*Hotel Name for Master Page*/
+.logo h1 a {
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: 'Playfair Display', serif;
+    margin-top: 0.5em !important;
+    text-decoration: none !important;
+}
+.logo h1 a span {
+    color: #1bfff6;
+}
+
+/* The navbar container */
+#nav {
+    width: 761px;
+    margin: 0 auto;
+    list-style: none;
+}
+#nav li {
+    float: left;
+    height: 30px;
+    width: 140px;
+}
+#nav li a {
+    display: block;
+    text-align: center;
+    width: 173px; /* fixed width */
+    color: #f2f2f2;
+    text-decoration: none;
+}
+.td2 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 150%;
+}
+
+.td1 {
+    font-weight: bold;
+    font-size: 120%;
+    color: black;
+}
+
+
+
+/*Different*/
+#nav1 {
+    width: 800px;
+    margin: 0 auto;
+    list-style: none;
+
+}
+#nav1 li {
+    float: left;
+    height: 30px;
+    width: 200px;   
+}
+#a {
+    font-size: larger;
+    color: white;
+}
+
+
+#signup {
+    background-color: lightblue;
+    background-image: url("../images/signup.jpg");
+    background-size: cover;
+}
+
